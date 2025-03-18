@@ -1,0 +1,63 @@
+[{
+  "_id": {
+    "$oid": "67d4f8e50e4dd832544d0ff7"
+  },
+  "user_id": {
+    "$oid": "67d4f8e20e4dd832544d0ff6"
+  },
+  "recipient": "Nguyễn Văn Huy",
+  "phoneNumber": "0912345678",
+  "province": "Hồ Chí Minh",
+  "district": "Quận 1",
+  "ward": "Phường Bến Nghé",
+  "streetAddress": "123 Lê Lợi",
+  "isDefault": true,
+  "createdAt": {
+    "$date": "2025-03-18T08:30:22.345Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-18T08:30:22.345Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d4f8e50e4dd832544d0ff8"
+  },
+  "user_id": {
+    "$oid": "67d4f8e20e4dd832544d0ff6"
+  },
+  "recipient": "Nguyễn Văn Huy",
+  "phoneNumber": "0987654321",
+  "province": "Hồ Chí Minh",
+  "district": "Quận 7",
+  "ward": "Phường Tân Phú",
+  "streetAddress": "456 Nguyễn Hữu Thọ, Khu đô thị Phú Mỹ Hưng",
+  "isDefault": false,
+  "createdAt": {
+    "$date": "2025-03-18T09:15:10.720Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-18T09:15:10.720Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d4f8e50e4dd832544d0ff9"
+  },
+  "user_id": {
+    "$oid": "67d4f8e20e4dd832544d0ff6"
+  },
+  "recipient": "Trần Thị Lan",
+  "phoneNumber": "0909876543",
+  "province": "Hà Nội",
+  "district": "Quận Ba Đình",
+  "ward": "Phường Điện Biên",
+  "streetAddress": "789 Đội Cấn",
+  "isDefault": false,
+  "createdAt": {
+    "$date": "2025-03-18T10:45:33.901Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-18T10:45:33.901Z"
+  }
+}]

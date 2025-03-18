@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "65f345a1a5b9c1d123456790"
+  },
+  "name": "Skincare",
+  "description": "Các sản phẩm chăm sóc da như kem dưỡng, sữa rửa mặt, toner, serum."
+},
+{
+  "_id": {
+    "$oid": "65f345a1a5b9c1d123456791"
+  },
+  "name": "Makeup",
+  "description": "Các sản phẩm trang điểm như son môi, phấn nền, mascara, phấn mắt."
+},
+{
+  "_id": {
+    "$oid": "65f345a1a5b9c1d123456792"
+  },
+  "name": "Haircare",
+  "description": "Các sản phẩm chăm sóc tóc như dầu gội, dầu xả, tinh dầu dưỡng tóc."
+}]

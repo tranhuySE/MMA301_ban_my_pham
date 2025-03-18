@@ -1,0 +1,197 @@
+[{
+  "_id": {
+    "$oid": "65f345a1a5b9c1d123456789"
+  },
+  "name": "Kem dưỡng ẩm",
+  "brand": "L'Oreal",
+  "category_id": {
+    "$oid": "65f345a1a5b9c1d123456790"
+  },
+  "price": 250000,
+  "stock": 100,
+  "description": "Kem dưỡng ẩm giúp da mềm mại và giữ ẩm suốt 24h.",
+  "image": "https://res.cloudinary.com/dpxavwyst/image/upload/v1742211802/ylcwsdwa4i2s3zrjp6hn.jpg"
+},
+{
+  "_id": {
+    "$oid": "65f345a1a5b9c1d12345678a"
+  },
+  "name": "Son môi đỏ",
+  "brand": "Maybelline",
+  "category_id": {
+    "$oid": "65f345a1a5b9c1d123456791"
+  },
+  "price": 180000,
+  "stock": 50,
+  "description": "Son môi màu đỏ lâu trôi, giữ màu đến 12 giờ.",
+  "image": "https://res.cloudinary.com/dpxavwyst/image/upload/v1742246688/nxmodaeubbh8ocli2z9f.jpg"
+},
+{
+  "_id": {
+    "$oid": "65f345a1a5b9c1d12345678b"
+  },
+  "name": "Sữa rửa mặt",
+  "brand": "Cetaphil",
+  "category_id": {
+    "$oid": "65f345a1a5b9c1d123456790"
+  },
+  "price": 150000,
+  "stock": 200,
+  "description": "Sữa rửa mặt nhẹ dịu, phù hợp với mọi loại da.",
+  "image": "https://res.cloudinary.com/dpxavwyst/image/upload/v1742246700/qtsqfogvnp2q3fereevq.jpg"
+},
+{
+  "_id": {
+    "$oid": "65f345a1a5b9c1d12345678c"
+  },
+  "name": "Serum Vitamin C",
+  "brand": "The Ordinary",
+  "category_id": {
+    "$oid": "65f345a1a5b9c1d123456790"
+  },
+  "price": 320000,
+  "stock": 80,
+  "description": "Serum chứa 10% Vitamin C giúp làm sáng da và chống lão hóa.",
+  "image": "https://res.cloudinary.com/dpxavwyst/image/upload/v1742246712/xurfkljp3dkibtpxgu67.jpg"
+},
+{
+  "_id": {
+    "$oid": "65f345a1a5b9c1d12345678d"
+  },
+  "name": "Phấn nền mịn",
+  "brand": "Maybelline",
+  "category_id": {
+    "$oid": "65f345a1a5b9c1d123456791"
+  },
+  "price": 220000,
+  "stock": 65,
+  "description": "Phấn nền che phủ hoàn hảo, giữ lớp nền suốt 24h không trôi.",
+  "image": "https://res.cloudinary.com/dpxavwyst/image/upload/v1742246722/ctzpxcwr9ybw1pvsi4o1.jpg"
+},
+{
+  "_id": {
+    "$oid": "65f345a1a5b9c1d12345678e"
+  },
+  "name": "Nước hoa hồng",
+  "brand": "Innisfree",
+  "category_id": {
+    "$oid": "65f345a1a5b9c1d123456790"
+  },
+  "price": 175000,
+  "stock": 120,
+  "description": "Nước hoa hồng không cồn, dịu nhẹ cho da nhạy cảm.",
+  "image": "https://res.cloudinary.com/dpxavwyst/image/upload/v1742246732/imc4zww0sl8n7oobiv0i.jpg"
+},
+{
+  "_id": {
+    "$oid": "65f345a1a5b9c1d12345678f"
+  },
+  "name": "Mascara dài mi",
+  "brand": "L'Oreal",
+  "category_id": {
+    "$oid": "65f345a1a5b9c1d123456791"
+  },
+  "price": 195000,
+  "stock": 45,
+  "description": "Mascara giúp mi dài và cong tự nhiên, không vón cục.",
+  "image": "https://res.cloudinary.com/dpxavwyst/image/upload/v1742246744/k7egzutxqxxplia7mkkg.jpg"
+},
+{
+  "_id": {
+    "$oid": "65f345a1a5b9c1d123456792"
+  },
+  "name": "Kem chống nắng SPF 50",
+  "brand": "Bioré",
+  "category_id": {
+    "$oid": "65f345a1a5b9c1d123456790"
+  },
+  "price": 285000,
+  "stock": 90,
+  "description": "Kem chống nắng dạng sữa, thẩm thấu nhanh không gây nhờn rít.",
+  "image": "https://res.cloudinary.com/dpxavwyst/image/upload/v1742246753/u8yj3zzgsv2wyy4kmqkg.jpg"
+},
+{
+  "_id": {
+    "$oid": "65f345a1a5b9c1d123456793"
+  },
+  "name": "Phấn má hồng",
+  "brand": "Innisfree",
+  "category_id": {
+    "$oid": "65f345a1a5b9c1d123456791"
+  },
+  "price": 160000,
+  "stock": 75,
+  "description": "Phấn má hồng màu tự nhiên, dễ tán đều trên da.",
+  "image": "https://res.cloudinary.com/dpxavwyst/image/upload/v1742246763/ukhjjc43fz4kjy2p5vrz.jpg"
+},
+{
+  "_id": {
+    "$oid": "65f345a1a5b9c1d123456794"
+  },
+  "name": "Kem dưỡng mắt",
+  "brand": "Cetaphil",
+  "category_id": {
+    "$oid": "65f345a1a5b9c1d123456790"
+  },
+  "price": 330000,
+  "stock": 60,
+  "description": "Kem dưỡng vùng mắt giúp giảm quầng thâm và nếp nhăn.",
+  "image": "https://res.cloudinary.com/dpxavwyst/image/upload/v1742246779/iyl885sjpequab1tfgn6.jpg"
+},
+{
+  "_id": {
+    "$oid": "65f345a1a5b9c1d123456795"
+  },
+  "name": "Kẻ mắt nước",
+  "brand": "Maybelline",
+  "category_id": {
+    "$oid": "65f345a1a5b9c1d123456791"
+  },
+  "price": 165000,
+  "stock": 85,
+  "description": "Kẻ mắt nước đen sắc nét, không trôi, không lem.",
+  "image": "https://res.cloudinary.com/dpxavwyst/image/upload/v1742246789/mcur8lach2gmdlwfounp.jpg"
+},
+{
+  "_id": {
+    "$oid": "65f345a1a5b9c1d123456796"
+  },
+  "name": "Mặt nạ dưỡng ẩm",
+  "brand": "The Ordinary",
+  "category_id": {
+    "$oid": "65f345a1a5b9c1d123456790"
+  },
+  "price": 145000,
+  "stock": 110,
+  "description": "Mặt nạ giấy cung cấp độ ẩm sâu cho da khô, thiếu nước.",
+  "image": "https://res.cloudinary.com/dpxavwyst/image/upload/v1742246801/gfy9cl93idyiaulrfvz0.jpg"
+},
+{
+  "_id": {
+    "$oid": "65f345a1a5b9c1d123456797"
+  },
+  "name": "Son dưỡng môi",
+  "brand": "Bioré",
+  "category_id": {
+    "$oid": "65f345a1a5b9c1d123456791"
+  },
+  "price": 95000,
+  "stock": 150,
+  "description": "Son dưỡng môi giúp môi mềm mịn, căng mọng tự nhiên.",
+  "image": "https://res.cloudinary.com/dpxavwyst/image/upload/v1742247003/mmvy8jcchcvtqgoolabi.jpg"
+},
+{
+  "_id": {
+    "$oid": "67d65d942d11a4e4908c57c1"
+  },
+  "name": "Kem dưỡng ẩm",
+  "brand": "Cetaphil",
+  "category_id": {
+    "$oid": "65f345a1a5b9c1d123456790"
+  },
+  "price": 250000,
+  "stock": 150,
+  "description": "Kem dưỡng ẩm giúp da mềm mịn, phù hợp với da nhạy cảm.",
+  "image": "https://res.cloudinary.com/dpxavwyst/image/upload/v1742247013/snjkqzhmql4497auxpk5.jpg",
+  "__v": 0
+}]

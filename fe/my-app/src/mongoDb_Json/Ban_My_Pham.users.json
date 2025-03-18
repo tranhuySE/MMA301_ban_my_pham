@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "67d4f8e20e4dd832544d0ff6"
+  },
+  "username": "admin1",
+  "email": "huy@gmail.com",
+  "password": "$2b$10$b7rHEZq5YYRPdDp.f5hX9uInIkvptRjU4MmdGcUaeSuic3itR6PSa",
+  "role": "customer",
+  "createdAt": {
+    "$date": "2025-03-15T03:49:54.790Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-15T03:49:54.790Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d4f90e0e4dd832544d0ff8"
+  },
+  "username": "user",
+  "email": "user@gmail.com",
+  "password": "$2b$10$y4TuUN66YwqbMTwNIxXNLeKkpIx8/Q.gETmpsTV3f1yBbSYT0gVW6",
+  "role": "customer",
+  "createdAt": {
+    "$date": "2025-03-15T03:50:38.447Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-15T03:50:38.447Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d696b1c20fab34126a0ca4"
+  },
+  "username": "tranhuy",
+  "email": "huy1@gmail.com",
+  "password": "$2b$10$qW/crum5N0a7qcwedp1enOnVF6YVBufdI.3I.ajoginc6F3UVR4WK",
+  "role": "customer",
+  "createdAt": {
+    "$date": "2025-03-16T09:15:29.159Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-16T09:15:29.159Z"
+  },
+  "__v": 0
+}]

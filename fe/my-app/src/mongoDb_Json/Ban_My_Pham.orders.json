@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "65f345a1a5b9c1d12345678e"
+  },
+  "user": {
+    "$oid": "65f345a1a5b9c1d12345678d"
+  },
+  "products": [
+    {
+      "product_id": {
+        "$oid": "65f345a1a5b9c1d123456789"
+      }
+    },
+    {
+      "product_id": {
+        "$oid": "65f345a1a5b9c1d12345678a"
+      }
+    }
+  ],
+  "total": 610000,
+  "status": "pending",
+  "created_at": {
+    "$date": "2025-03-14T10:00:00.000Z"
+  }
+}]

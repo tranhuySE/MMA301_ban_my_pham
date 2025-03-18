@@ -1,0 +1,8 @@
+username-pass:
+
+huy@gmail.com - admin
+user@gmail.com - user123
+huy1@gmail.com - 123456 
+
+nếu chạy trên android studio thì thay api = http://10.0.2.2:9999/ 
+nếu chạy trên điện thoại thật thì thay api = http://ip_máy_tính/ 
