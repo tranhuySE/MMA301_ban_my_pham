@@ -195,7 +195,13 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Beauty</Text>
+        <View style={styles.logo}>
+          <Text style={styles.logoText}>
+            <Text style={styles.beautiText}>Beauti</Text>
+            <Text style={styles.vineText}>vine</Text>
+          </Text>
+          <View style={styles.underline} />
+        </View>
         <TouchableOpacity
           style={styles.logoutButton}
           onPress={
@@ -290,9 +296,31 @@ export default HomeScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f8f9fa",
+    backgroundColor: "#fff5f7",
     padding: 10,
     marginTop: 15,
+  },
+  logo: {
+    flex: 1,
+  },
+  logoText: {
+    fontSize: 35,
+    fontWeight: "bold",
+  },
+  beautiText: {
+    color: "#FF69B4",
+    fontFamily: " cursive",
+  },
+  vineText: {
+    color: "#32CD32",
+    fontFamily: "sans-serif",
+  },
+  underline: {
+    width: 100,
+    height: 2,
+    backgroundColor: "#FF69B4",
+    borderRadius: 2,
+    marginTop: 5,
   },
   header: {
     flexDirection: "row",
@@ -317,6 +345,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     borderRadius: 10,
     paddingLeft: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
     marginVertical: 10,
     alignItems: "center",
     borderWidth: 1,
@@ -376,8 +406,8 @@ const styles = StyleSheet.create({
     borderColor: "#e0e0e0",
   },
   selectedBrandButton: {
-    backgroundColor: "#28a745",
-    borderColor: "#28a745",
+    backgroundColor: "#ffc0cb",
+    borderColor: "#ffc0cb",
   },
   brandText: {
     fontSize: 14,
@@ -460,7 +490,7 @@ const styles = StyleSheet.create({
   },
   addToCartButton: {
     flexDirection: "row",
-    backgroundColor: "#28a745",
+    backgroundColor: "#ffc0cb",
     padding: 8,
     borderRadius: 5,
     alignItems: "center",

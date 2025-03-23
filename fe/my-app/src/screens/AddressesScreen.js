@@ -30,7 +30,7 @@ const AddressesScreen = ({ navigation }) => {
           return;
         }
         const res = await axios.get(
-          `http://192.168.0.107:9999/api/address/all/${user._id}`
+          `http://10.33.50.64:9999/api/address/all/${user._id}`
         );
         setAddresses(res.data.data);
       } catch (error) {
@@ -61,7 +61,7 @@ const AddressesScreen = ({ navigation }) => {
       {
         text: "Xóa",
         onPress: () => {
-          setAddresses(addresses.filter((item) => item.id !== id));
+          setAddresses(addresses.filter((item) => item._id !== id));
         },
         style: "destructive",
       },
@@ -116,7 +116,7 @@ const AddressesScreen = ({ navigation }) => {
 
         <TouchableOpacity
           style={styles.deleteButton}
-          onPress={() => handleDeleteAddress(item.id)}
+          onPress={() => handleDeleteAddress(item._id)}
         >
           <Ionicons name="trash-outline" size={18} color="#ff3b30" />
           <Text style={styles.deleteButtonText}>Xóa</Text>
@@ -303,7 +303,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#0066cc",
+    backgroundColor: "#ffc0cb",
     padding: 16,
     borderRadius: 12,
     shadowColor: "#000",

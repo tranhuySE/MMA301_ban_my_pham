@@ -9,7 +9,7 @@ export const loginUser = createAsyncThunk(
   async (userData, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        "http://192.168.0.107:9999/api/users/login",
+        "http://10.33.50.64:9999/api/users/login",
         userData
       );
       return response.data;

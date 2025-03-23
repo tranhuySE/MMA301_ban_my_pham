@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, StyleSheet, Alert } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  Button,
+  StyleSheet,
+  Alert,
+  TouchableOpacity,
+} from "react-native";
 import { useDispatch } from "react-redux";
 import { registerUser } from "../redux/slices/authSlice";
 
@@ -44,7 +52,9 @@ const RegisterScreen = ({ navigation }) => {
         value={password}
         onChangeText={setPassword}
       />
-      <Button title="Đăng ký" onPress={handleRegister} />
+      <TouchableOpacity style={styles.registerButton} onPress={handleRegister}>
+        <Text style={styles.buttonText}>Đăng Kí</Text>
+      </TouchableOpacity>
       <Text style={styles.loginText}>
         Đã có tài khoản?{" "}
         <Text
@@ -86,6 +96,19 @@ const styles = StyleSheet.create({
   },
   link: {
     color: "blue",
+    fontWeight: "bold",
+  },
+  registerButton: {
+    width: "100%",
+    height: 50,
+    backgroundColor: "#ffc0cb",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 10,
+  },
+  buttonText: {
+    color: "#fff",
+    fontSize: 18,
     fontWeight: "bold",
   },
 });

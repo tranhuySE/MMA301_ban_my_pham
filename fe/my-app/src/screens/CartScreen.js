@@ -16,6 +16,7 @@ import {
   updateQuantity,
 } from "../redux/slices/cartSlice";
 import Icon from "react-native-vector-icons/Ionicons";
+import { Ionicons } from "@expo/vector-icons";
 
 const CartScreen = ({ navigation }) => {
   const dispatch = useDispatch();
@@ -117,7 +118,7 @@ const CartScreen = ({ navigation }) => {
           style={styles.removeButton}
           onPress={() => handleRemoveFromCart(item._id)}
         >
-          <Icon name="trash-outline" size={24} color="red" />
+          <Icon name="trash-outline" size={24} color="#ff8da1" />
         </TouchableOpacity>
       </View>
     </View>
@@ -127,7 +128,10 @@ const CartScreen = ({ navigation }) => {
     <View style={styles.container}>
       <Text style={styles.header}>Giỏ hàng của bạn</Text>
       {cartItems.length === 0 ? (
-        <Text style={styles.emptyText}>Giỏ hàng trống</Text>
+        <View style={styles.containerEmpty}>
+          <Ionicons name="cart-outline" size={50} color="#999" />
+          <Text style={styles.emptyText}>Giỏ hàng trống</Text>
+        </View>
       ) : (
         <>
           <FlatList
@@ -149,18 +153,22 @@ const CartScreen = ({ navigation }) => {
                 {calculateTotal().toLocaleString()} VND
               </Text>
             </View>
-            <TouchableOpacity
-              style={styles.checkoutButton}
-              onPress={() => dispatch(clearCart(user._id))}
-            >
-              <Text style={styles.checkoutButtonText}>Reset Cart</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.checkoutButton}
-              onPress={handleCheckout}
-            >
-              <Text style={styles.checkoutButtonText}>Thanh toán ngay</Text>
-            </TouchableOpacity>
+            <View style={styles.buttonContainer}>
+              <TouchableOpacity
+                style={styles.resetCartButton}
+                onPress={() => dispatch(clearCart(user._id))}
+              >
+                <Icon name="trash-outline" size={20} color="#fff" />
+                <Text style={styles.buttonText}>Xóa giỏ hàng</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={styles.checkoutButton}
+                onPress={handleCheckout}
+              >
+                <Icon name="cart-outline" size={20} color="#fff" />
+                <Text style={styles.buttonText}>Thanh toán ngay</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </>
       )}
@@ -171,15 +179,22 @@ const CartScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f8f9fa",
+    backgroundColor: "#fff5f7",
     padding: 10,
+  },
+  containerEmpty: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 20,
+    backgroundColor: "#f9f9f9",
   },
   header: {
     fontSize: 22,
     fontWeight: "bold",
     textAlign: "center",
-    marginVertical: 25,
-    color: "#333",
+    marginVertical: 30,
+    color: "#ff6b8b",
   },
   cartItem: {
     flexDirection: "row",
@@ -193,6 +208,8 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.2,
     shadowRadius: 2,
+    borderLeftWidth: 4,
+    borderLeftColor: "#ffc0cb",
   },
   image: {
     width: 70,
@@ -211,7 +228,7 @@ const styles = StyleSheet.create({
   },
   price: {
     fontSize: 15,
-    color: "green",
+    color: "#ff6b8b",
     marginBottom: 6,
   },
   quantityContainer: {
@@ -220,7 +237,7 @@ const styles = StyleSheet.create({
     marginTop: 2,
   },
   quantityButton: {
-    backgroundColor: "#f0f0f0",
+    backgroundColor: "#fff0f3",
     borderRadius: 6,
     width: 28,
     height: 28,
@@ -230,6 +247,7 @@ const styles = StyleSheet.create({
   quantityButtonText: {
     fontSize: 16,
     fontWeight: "bold",
+    color: "#ff6b8b",
   },
   quantity: {
     paddingHorizontal: 14,
@@ -248,7 +266,7 @@ const styles = StyleSheet.create({
   itemTotal: {
     fontSize: 15,
     fontWeight: "bold",
-    color: "#333",
+    color: "#ff6b8b",
   },
   removeButton: {
     padding: 5,
@@ -263,6 +281,8 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 3,
+    borderTopWidth: 3,
+    borderTopColor: "#ffc0cb",
   },
   summaryRow: {
     flexDirection: "row",
@@ -280,25 +300,46 @@ const styles = StyleSheet.create({
   summaryTotal: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "green",
+    color: "#ff6b8b",
+  },
+  buttonContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 15,
   },
   checkoutButton: {
-    backgroundColor: "#ff6600",
+    backgroundColor: "#ff8da1",
     borderRadius: 12,
-    padding: 15,
-    marginTop: 15,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    flex: 1,
+    marginLeft: 10,
+    flexDirection: "row",
+    justifyContent: "center",
     alignItems: "center",
   },
-  checkoutButtonText: {
+  resetCartButton: {
+    backgroundColor: "#ff8da1",
+    borderRadius: 12,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    flex: 1,
+    marginRight: 10,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  buttonText: {
     color: "#fff",
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: "bold",
+    marginLeft: 5,
   },
   emptyText: {
     textAlign: "center",
     fontSize: 18,
     marginTop: 40,
-    color: "gray",
+    color: "#ff6b8b",
   },
 });
 

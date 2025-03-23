@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../redux/slices/authSlice";
-import Icon from "react-native-vector-icons/MaterialIcons"; // Hoặc Ionicons tuỳ vào thư viện bạn đang dùng
+import Icon from "react-native-vector-icons/MaterialIcons";
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
   button: {
     width: "100%",
     height: 50,
-    backgroundColor: "#007bff",
+    backgroundColor: "#ffc0cb",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 10,

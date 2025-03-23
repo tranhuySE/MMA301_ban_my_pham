@@ -31,6 +31,7 @@ const CheckoutScreen = ({ navigation }) => {
   const [paymentMethod, setPaymentMethod] = useState("COD");
   const [savedAddresses, setSavedAddresses] = useState([]);
   const [selectedAddressID, setSelectedAddressID] = useState("");
+  const status = "pendding";
 
   useEffect(() => {
     const fetchAddresses = async () => {
@@ -40,7 +41,7 @@ const CheckoutScreen = ({ navigation }) => {
           return;
         }
         const res = await axios.get(
-          `http://192.168.0.107:9999/api/address/all/${user._id}`
+          `http://10.33.50.64:9999/api/address/all/${user._id}`
         );
         setSavedAddresses(res.data.data);
       } catch (error) {
@@ -65,6 +66,7 @@ const CheckoutScreen = ({ navigation }) => {
     }
 
     const order = {
+      orderId: `ORD-${Date.now()}`,
       userId: user._id,
       items: cartItems,
       totalAmount,
@@ -73,30 +75,38 @@ const CheckoutScreen = ({ navigation }) => {
       address,
       paymentMethod,
       createdAt: new Date().toISOString(),
+      status: "pending",
     };
 
-    console.log(order);
+    if (paymentMethod === "COD") {
+      try {
+        const existingOrders = await AsyncStorage.getItem(`orders_${user._id}`);
+        const orders = existingOrders ? JSON.parse(existingOrders) : [];
 
-    try {
-      const existingOrders = await AsyncStorage.getItem("orders");
-      const orders = existingOrders ? JSON.parse(existingOrders) : [];
-      orders.push(order);
+        orders.push(order);
 
-      await AsyncStorage.setItem(`orders_${user._id}`, JSON.stringify(orders));
+        await AsyncStorage.setItem(
+          `orders_${user._id}`,
+          JSON.stringify(orders)
+        );
 
-      dispatch(clearCart(user._id));
+        dispatch(clearCart(user._id));
 
-      setTimeout(() => {
-        Alert.alert("Thành công", "Đơn hàng của bạn đã được đặt!", [
-          {
-            text: "OK",
-            onPress: () =>
-              navigation.navigate("MainScreen", { screen: "Cart" }),
-          },
-        ]);
-      }, 100);
-    } catch (error) {
-      console.error("Lỗi khi lưu đơn hàng:", error);
+        setTimeout(() => {
+          Alert.alert("Thành công", "Đơn hàng của bạn đã được đặt!", [
+            {
+              text: "OK",
+              onPress: () =>
+                navigation.navigate("MainScreen", { screen: "Cart" }),
+            },
+          ]);
+        }, 100);
+      } catch (error) {
+        console.error("Lỗi khi lưu đơn hàng:", error);
+        Alert.alert("Lỗi", "Không thể lưu đơn hàng, vui lòng thử lại!");
+      }
+    } else {
+      navigation.navigate("PaymentScreen", { orderInfo: order });
     }
   };
 
@@ -175,6 +185,15 @@ const CheckoutScreen = ({ navigation }) => {
         onPress={() => setPaymentMethod("Card")}
       >
         <Text>💳 Thẻ tín dụng</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={[
+          styles.paymentButton,
+          paymentMethod === "VNPay" && styles.selected,
+        ]}
+        onPress={() => setPaymentMethod("VNPay")}
+      >
+        <Text>Thanh toán qua VNPAY</Text>
       </TouchableOpacity>
 
       <Text style={styles.title}>Đơn hàng</Text>

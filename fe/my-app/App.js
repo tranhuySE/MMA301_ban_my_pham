@@ -17,11 +17,22 @@ import OrderHistoryScreen from "./src/screens/OrderHistoryScreen";
 import AddressesScreen from "./src/screens/AddressesScreen";
 import SettingsScreen from "./src/screens/SettingScreen";
 import CheckoutScreen from "./src/screens/CheckoutScreen";
+import PaymentScreen from "./src/screens/PaymentScreen";
+import { Linking } from "react-native";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
+const linking = {
+  prefixes: ["http://192.168.0.101:9999/"],
+  config: {
+    screens: {
+      MainScreen: "main",
+      LoginScreen: "login",
+      RegisterScreen: "register",
+    },
+  },
+};
 
-// Tab Navigator cho các màn hình chính
 const MainTabs = () => {
   return (
     <Tab.Navigator
@@ -50,7 +61,7 @@ const MainTabs = () => {
 const App = () => {
   return (
     <Provider store={store}>
-      <NavigationContainer>
+      <NavigationContainer linking={linking}>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="MainScreen" component={MainTabs} />
           <Stack.Screen name="LoginScreen" component={LoginScreen} />
@@ -64,6 +75,11 @@ const App = () => {
           <Stack.Screen name="Addresses" component={AddressesScreen} />
           <Stack.Screen name="Settings" component={SettingsScreen} />
           <Stack.Screen name="Checkout" component={CheckoutScreen} />
+          <Stack.Screen
+            name="PaymentScreen"
+            component={PaymentScreen}
+            options={{ title: "Thanh Toán VNPay" }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
